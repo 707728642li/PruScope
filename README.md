@@ -77,7 +77,7 @@ Expected output: `reviewer_check.json` matches `examples/synthetic_metric_audit/
 
 ## Installation and full analysis
 
-The public-lightweight reviewer check needs only Python 3.10+ and the packages in `requirements-ci.txt`. Re-running model training or inference additionally requires PyTorch, Ultralytics, CUDA for GPU execution, the frozen data partitions, and matching checkpoints. See [docs/INSTALLATION.md](docs/INSTALLATION.md), [docs/REPRODUCIBILITY.md](docs/REPRODUCIBILITY.md), and [MODEL_CARD.md](MODEL_CARD.md).
+The public-lightweight reviewer check needs only Python 3.10+ and the standard library; `requirements-ci.txt` is intentionally empty. Re-running model training or inference additionally requires PyTorch, Ultralytics, CUDA for GPU execution, the frozen data partitions, and matching checkpoints. See [docs/INSTALLATION.md](docs/INSTALLATION.md), [docs/REPRODUCIBILITY.md](docs/REPRODUCIBILITY.md), and [MODEL_CARD.md](MODEL_CARD.md).
 
 ## Data, weights, and privacy boundary
 
