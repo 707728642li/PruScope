@@ -30,7 +30,11 @@ def main() -> int:
     files = sorted(
         path
         for path in ROOT.rglob("*")
-        if path.is_file() and path not in EXCLUDED and ".git" not in path.relative_to(ROOT).parts
+        if path.is_file()
+        and path not in EXCLUDED
+        and ".git" not in path.relative_to(ROOT).parts
+        and "__pycache__" not in path.relative_to(ROOT).parts
+        and path.suffix.lower() not in {".pyc", ".pyo"}
     )
     rows = []
     for path in files:

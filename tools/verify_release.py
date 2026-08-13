@@ -70,7 +70,7 @@ TEXT_SUFFIXES = {
     ".svg",
     ".gitignore",
 }
-TEXT_FILENAMES = {"LICENSE", "CITATION.cff", ".gitignore"}
+TEXT_FILENAMES = {"LICENSE", "CITATION.cff", ".gitattributes", ".gitignore"}
 TEXT_EXEMPTIONS = {
     "docs/INSTALLATION.md",  # explanatory placeholders such as dataset path error
 }
@@ -92,7 +92,10 @@ def iter_files() -> list[Path]:
     return sorted(
         path
         for path in ROOT.rglob("*")
-        if path.is_file() and ".git" not in path.relative_to(ROOT).parts
+        if path.is_file()
+        and ".git" not in path.relative_to(ROOT).parts
+        and "__pycache__" not in path.relative_to(ROOT).parts
+        and path.suffix.lower() not in {".pyc", ".pyo"}
     )
 
 
