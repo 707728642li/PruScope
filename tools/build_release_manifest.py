@@ -12,14 +12,18 @@ ROOT = Path(__file__).resolve().parents[1]
 MANIFEST = ROOT / "release/FILE_MANIFEST.csv"
 CHECKSUMS = ROOT / "release/SHA256SUMS"
 EXCLUDED = {MANIFEST, CHECKSUMS}
+TEXT_SUFFIXES = {
+    ".cff", ".csv", ".gitignore", ".json", ".jsonl", ".md", ".py",
+    ".svg", ".txt", ".yaml", ".yml",
+}
+TEXT_FILENAMES = {"LICENSE", "CITATION.cff", ".gitattributes", ".gitignore"}
 
 
-def sha256(path: Path) -> str:
-    digest = hashlib.sha256()
-    with path.open("rb") as handle:
-        for chunk in iter(lambda: handle.read(1024 * 1024), b""):
-            digest.update(chunk)
-    return digest.hexdigest()
+def canonical_bytes(path: Path) -> bytes:
+    payload = path.read_bytes()
+    if path.name in TEXT_FILENAMES or path.suffix.lower() in TEXT_SUFFIXES:
+        payload = payload.replace(b"\r\n", b"\n").replace(b"\r", b"\n")
+    return payload
 
 
 def main() -> int:
@@ -28,10 +32,12 @@ def main() -> int:
         for path in ROOT.rglob("*")
         if path.is_file() and path not in EXCLUDED and ".git" not in path.relative_to(ROOT).parts
     )
-    rows = [
-        (path.relative_to(ROOT).as_posix(), path.stat().st_size, sha256(path))
-        for path in files
-    ]
+    rows = []
+    for path in files:
+        payload = canonical_bytes(path)
+        rows.append(
+            (path.relative_to(ROOT).as_posix(), len(payload), hashlib.sha256(payload).hexdigest())
+        )
     MANIFEST.parent.mkdir(parents=True, exist_ok=True)
     with MANIFEST.open("w", encoding="utf-8", newline="") as handle:
         writer = csv.writer(handle, lineterminator="\n")

@@ -96,16 +96,15 @@ def iter_files() -> list[Path]:
     )
 
 
-def sha256(path: Path) -> str:
-    digest = hashlib.sha256()
-    with path.open("rb") as handle:
-        for chunk in iter(lambda: handle.read(1024 * 1024), b""):
-            digest.update(chunk)
-    return digest.hexdigest()
-
-
 def is_text(path: Path) -> bool:
     return path.name in TEXT_FILENAMES or path.suffix.lower() in TEXT_SUFFIXES
+
+
+def canonical_bytes(path: Path) -> bytes:
+    payload = path.read_bytes()
+    if is_text(path):
+        payload = payload.replace(b"\r\n", b"\n").replace(b"\r", b"\n")
+    return payload
 
 
 def verify_required(errors: list[str]) -> None:
@@ -187,9 +186,10 @@ def verify_checksums(errors: list[str]) -> None:
         errors.append("SHA256SUMS path set differs from current repository")
     for relative in sorted(actual_paths & set(expected) & set(checksum_lines)):
         path = ROOT / relative
-        digest = sha256(path)
+        payload = canonical_bytes(path)
+        digest = hashlib.sha256(payload).hexdigest()
         recorded_size, recorded_digest = expected[relative]
-        if path.stat().st_size != recorded_size:
+        if len(payload) != recorded_size:
             errors.append(f"manifest size mismatch: {relative}")
         if digest != recorded_digest or digest != checksum_lines[relative]:
             errors.append(f"checksum mismatch: {relative}")

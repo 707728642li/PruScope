@@ -41,6 +41,8 @@ Once those rights are approved, the stable release should add a weight manifest,
 
 Final figure scripts are in `paper/scripts/`. Some qualitative panels depend on restricted orchard images and per-image predictions and cannot be regenerated from this lightweight repository. Quantitative figure regeneration requires the frozen result tables documented in the evidence map. The committed PNG/PDF/SVG outputs are the review artifacts and are covered by `release/SHA256SUMS`.
 
+Checksums use canonical LF bytes for text files so the same Git content verifies on Windows and Linux; binary assets are hashed byte-for-byte.
+
 ## Determinism boundary
 
 Seeds and grouped inputs are fixed, but GPU kernels, dependency versions, data-loader scheduling, and image shapes can produce small numerical differences. Report both the requested seed and the actual framework/runtime versions. Do not treat bitwise identity as a substitute for source-group integrity and paired statistical evaluation.
