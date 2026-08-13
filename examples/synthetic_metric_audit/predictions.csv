@@ -1,0 +1,5 @@
+image_id,reference_count,true_positive,false_positive,false_negative
+synthetic_clear,10,9,1,1
+synthetic_dense,20,14,2,6
+synthetic_empty,0,0,0,0
+synthetic_occluded,8,3,1,5

@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you use the software materials, cite this repository and the associated manuscript."
+title: "PruScope: leakage-controlled plum fruit detection and ordinal stage phenotyping"
+type: software
+version: 1.0.0-rc.1
+date-released: 2026-08-14
+authors:
+  - given-names: Taishan
+    family-names: Li
+    affiliation: Chinese Academy of Forestry
+    email: litaishan@caf.ac.cn
+repository-code: "https://github.com/707728642li/PruScope"
+url: "https://github.com/707728642li/PruScope"
+keywords:
+  - plant phenomics
+  - plum
+  - small-object detection
+  - orchard vision
+  - ordinal phenotyping
+preferred-citation:
+  type: article
+  title: "PruScope: Leakage-Controlled Detection, Counting, and Ordinal Stage Phenotyping of Plum from Microfruit to Visual Maturity"
+  authors:
+    - given-names: Hui
+      family-names: Li
+      affiliation: Research Institute of Forestry Policy and Information, Chinese Academy of Forestry
+      email: lihui09610@163.com
+  year: 2026
+  notes: "Manuscript under preparation; journal, volume, pages, and DOI are not yet assigned."

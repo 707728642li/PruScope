@@ -1,0 +1,40 @@
+1. Ubbens J, Stavness I, Pound MP, Guo W. Deep learning in plant phenotyping: the first ten years. Plant Phenomics. 2025;7(4):100062. doi:10.1016/j.plaphe.2025.100062.
+2. Koirala A, Walsh KB, Wang Z, McCarthy C. Deep learning – Method overview and review of use for fruit detection and yield estimation. Computers and Electronics in Agriculture. 2019;162:219-234. doi:10.1016/j.compag.2019.04.017.
+3. Bargoti S, Underwood J. Deep fruit detection in orchards. 2017 IEEE International Conference on Robotics and Automation (ICRA). 2017;3626-3633. doi:10.1109/icra.2017.7989417.
+4. Zhao R, Guan Y, Lu Y, Ji Z, Yin X, Jia W. FCOS-LSC: A Novel Model for Green Fruit Detection in a Complex Orchard Environment. Plant Phenomics. 2023;5:0069. doi:10.34133/plantphenomics.0069.
+5. Sun M, Xu L, Chen X, Ji Z, Zheng Y, Jia W. BFP Net: Balanced Feature Pyramid Network for Small Apple Detection in Complex Orchard Environment. Plant Phenomics. 2022;2022:9892464. doi:10.34133/2022/9892464.
+6. Wang J, Shang Y, Zheng X, Zhou P, Li S, Wang H. GreenFruitDetector: Lightweight green fruit detector in orchard environment. PLOS ONE. 2024;19(11):e0312164. doi:10.1371/journal.pone.0312164.
+7. El Akrouchi M, Mhada M, Bayad M, Hawkesford MJ, Gérard B. AI-based framework for early detection and segmentation of green citrus fruits in orchards. Smart Agricultural Technology. 2025;10:100834. doi:10.1016/j.atech.2025.100834.
+8. Lin TY, Dollar P, Girshick R, He K, Hariharan B, Belongie S. Feature Pyramid Networks for Object Detection. 2017 IEEE Conference on Computer Vision and Pattern Recognition (CVPR). 2017;936-944. doi:10.1109/cvpr.2017.106.
+9. Liu S, Qi L, Qin H, Shi J, Jia J. Path Aggregation Network for Instance Segmentation. 2018 IEEE/CVF Conference on Computer Vision and Pattern Recognition. 2018;8759-8768. doi:10.1109/cvpr.2018.00913.
+10. Akyon FC, Onur Altinuc S, Temizel A. Slicing Aided Hyper Inference and Fine-Tuning for Small Object Detection. 2022 IEEE International Conference on Image Processing (ICIP). 2022;966-970. doi:10.1109/icip46576.2022.9897990.
+11. Zhang W, Zheng C, Wang C, Guo W. DomAda-FruitDet: Domain-Adaptive Anchor-Free Fruit Detection Model for Auto Labeling. Plant Phenomics. 2024;6:0135. doi:10.34133/plantphenomics.0135.
+12. Zhang W, Chen K, Zheng C, Liu Y, Guo W. EasyDAM_V2: Efficient Data Labeling Method for Multishape, Cross-Species Fruit Detection. Plant Phenomics. 2022;2022:9761674. doi:10.34133/2022/9761674.
+13. Joshi A, Guevara D, Earles M. Standardizing and Centralizing Datasets for Efficient Training of Agricultural Deep Learning Models. Plant Phenomics. 2023;5:0084. doi:10.34133/plantphenomics.0084.
+14. Niu Y, Lu M, Liang X, Wu Q, Mu J. YOLO-plum: A high precision and real-time improved algorithm for plum recognition. PLOS ONE. 2023;18(7):e0287778. doi:10.1371/journal.pone.0287778.
+15. Niu Y. Plum data set. Figshare. 2023. doi:10.6084/m9.figshare.23641542.v1.
+16. James JA, Manching HK, Mattia MR, Bowman KD, Hulse-Kemp AM, Beksi WJ. CitDet: A Benchmark Dataset for Citrus Fruit Detection. IEEE Robotics and Automation Letters. 2024;9(12):10788-10795. doi:10.1109/LRA.2024.3474473.
+17. Lin TY, Maire M, Belongie S, Hays J, Perona P, Ramanan D, Dollár P, Zitnick CL. Microsoft COCO: Common Objects in Context. Lecture Notes in Computer Science. 2014;740-755. doi:10.1007/978-3-319-10602-1_48.
+18. Jocher G, Qiu J, Liu M, Lyu S, Akyon FC, Kalfaoglu ME. Ultralytics YOLO26: Unified Real-Time End-to-End Vision Models. arXiv. 2026;arXiv:2606.03748. doi:10.48550/arXiv.2606.03748.
+19. Li X, Wang W, Hu X, Yang J. Selective Kernel Networks. 2019 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR). 2019;510-519. doi:10.1109/cvpr.2019.00060.
+20. Solovyev R, Wang W, Gabruseva T. Weighted boxes fusion: Ensembling boxes from different object detection models. Image and Vision Computing. 2021;107:104117. doi:10.1016/j.imavis.2021.104117.
+21. Cao W, Mirjalili V, Raschka S. Rank consistent ordinal regression for neural networks with application to age estimation. Pattern Recognition Letters. 2020;140:325-331. doi:10.1016/j.patrec.2020.11.008.
+22. He K, Zhang X, Ren S, Sun J. Deep Residual Learning for Image Recognition. 2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR). 2016;770-778. doi:10.1109/cvpr.2016.90.
+23. Cohen J. Weighted kappa: Nominal scale agreement provision for scaled disagreement or partial credit. Psychological Bulletin. 1968;70(4):213-220. doi:10.1037/h0026256.
+24. Andvaag E, Krys K, Shirtliffe SJ, Stavness I. Counting Canola: Toward Generalizable Aerial Plant Detection Models. Plant Phenomics. 2024;6:0268. doi:10.34133/plantphenomics.0268.
+25. Li Y, Tang Y, Liu Y, Zheng D. Semi-supervised Counting of Grape Berries in the Field Based on Density Mutual Exclusion. Plant Phenomics. 2023;5:0115. doi:10.34133/plantphenomics.0115.
+26. Rivera-Palacio JC, Bunn C, Rahn E, Little-Savage D, Schmidt PG, Ryo M. Geographic-Scale Coffee Cherry Counting with Smartphones and Deep Learning. Plant Phenomics. 2024;6:0165. doi:10.34133/plantphenomics.0165.
+27. Wang Q, Fan X, Zhuang Z, Tjahjadi T, Jin S, Huan H, Ye Q. One to All: Toward a Unified Model for Counting Cereal Crop Heads Based on Few-Shot Learning. Plant Phenomics. 2024;6:0271. doi:10.34133/plantphenomics.0271.
+28. Lei T, Graefe J, Mayanja IK, Earles M, Bailey BN. Simulation of Automatically Annotated Visible and Multi-/Hyperspectral Images Using the Helios 3D Plant and Radiative Transfer Modeling Framework. Plant Phenomics. 2024;6:0189. doi:10.34133/plantphenomics.0189.
+29. Tang Z, Sun J, Tian Y, Xu J, Zhao W, Jiang G, Deng J, Gan X. CVRP: A rice image dataset with high-quality annotations for image segmentation and plant phenomics research. Plant Phenomics. 2025;7(1):100025. doi:10.1016/j.plaphe.2025.100025.
+30. Tang R, Lei Y, Luo B, Zhang J, Mu J. YOLOv7-Plum: Advancing Plum Fruit Detection in Natural Environments with Deep Learning. Plants. 2023;12(15):2883. doi:10.3390/plants12152883.
+31. Johanson R, Wilms C, Johannsen O, Frintrop S. S3AD: Semi-supervised Small Apple Detection in Orchard Environments. 2024 IEEE/CVF Winter Conference on Applications of Computer Vision (WACV). 2024;7061-7070. doi:10.1109/wacv57701.2024.00692.
+32. Yan J, Duan H, Xu R, Sun M, Ji Z, Xu L, Jia W. Mrtic Det: A structure aware detection framework for thinning stage fruit in non structured orchards. Computers and Electronics in Agriculture. 2025;239:110940. doi:10.1016/j.compag.2025.110940.
+33. Li J, Li X, Hu J, Liang M, Jiang K, Yang H, Tian M. A transformer-enhanced real-time detection method for young fruits in complex orchard environments. Smart Agricultural Technology. 2026;13:101762. doi:10.1016/j.atech.2025.101762.
+34. Li Y, Cai Y, Qi X, Liu S, Zhuang X, Zheng H, Tian Y, Zhu Y, Cao W, Zhang X. WPDSI: A deep learning method for wheat phenology detection from single-temporal images. Plant Phenomics. 2025;7(4):100144. doi:10.1016/j.plaphe.2025.100144.
+35. Hu S, Liu X, Wang W, Huang T, Feng W. A Universal Structure of YOLO Series Small Object Detection Models. Proceedings of the Asian Conference on Computer Vision. 2024;3706-3722.
+36. Sun H, Wang R, Li Y, Yang L, Lin S, Cao X, Zhang B. SET: Spectral Enhancement for Tiny Object Detection. Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 2025;4713-4723.
+37. Sun H, Li Y, Yang L, Cao X, Zhang B. Uncertainty-Aware Gradient Stabilization for Small Object Detection. Proceedings of the IEEE/CVF International Conference on Computer Vision. 2025;8407-8417.
+38. Moretti F, Jin Y, Mario G. Adaptive Slicing-Assisted Hyper Inference for Enhanced Small Object Detection in High-Resolution Imagery. arXiv. 2026;arXiv:2604.19233. doi:10.48550/arXiv.2604.19233.
+39. Jocher G, Qiu J. Ultralytics YOLO11. Version 11.0.0. 2024. https://github.com/ultralytics/ultralytics.
+40. Zhao Y, Lv W, Xu S, Wei J, Wang G, Dang Q, Liu Y, Chen J. DETRs Beat YOLOs on Real-time Object Detection. Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 2024;16965–16974. doi:10.1109/CVPR52733.2024.01605.

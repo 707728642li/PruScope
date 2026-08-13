@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security or confidential-data report
+    url: mailto:litaishan@caf.ac.cn
+    about: Report credentials, private paths, unsafe archive behavior, or restricted-data exposure privately.

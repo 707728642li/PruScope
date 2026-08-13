@@ -1,0 +1,79 @@
+{
+  "schema_version": "pruscope.synthetic_metric_audit.v1",
+  "n_images": 4,
+  "totals": {
+    "reference_count": 38,
+    "predicted_count": 30,
+    "true_positive": 26,
+    "false_positive": 4,
+    "false_negative": 12
+  },
+  "micro": {
+    "precision": 0.8666666666666667,
+    "recall": 0.6842105263157895,
+    "f1": 0.7647058823529411
+  },
+  "macro": {
+    "precision": 0.88125,
+    "recall": 0.74375,
+    "f1": 0.7944444444444445
+  },
+  "count": {
+    "mae": 2.0,
+    "bias": -2.0
+  },
+  "per_image": [
+    {
+      "image_id": "synthetic_clear",
+      "reference_count": 10,
+      "predicted_count": 10,
+      "true_positive": 9,
+      "false_positive": 1,
+      "false_negative": 1,
+      "precision": 0.9,
+      "recall": 0.9,
+      "f1": 0.9,
+      "count_error": 0,
+      "absolute_count_error": 0
+    },
+    {
+      "image_id": "synthetic_dense",
+      "reference_count": 20,
+      "predicted_count": 16,
+      "true_positive": 14,
+      "false_positive": 2,
+      "false_negative": 6,
+      "precision": 0.875,
+      "recall": 0.7,
+      "f1": 0.7777777777777778,
+      "count_error": -4,
+      "absolute_count_error": 4
+    },
+    {
+      "image_id": "synthetic_empty",
+      "reference_count": 0,
+      "predicted_count": 0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "count_error": 0,
+      "absolute_count_error": 0
+    },
+    {
+      "image_id": "synthetic_occluded",
+      "reference_count": 8,
+      "predicted_count": 4,
+      "true_positive": 3,
+      "false_positive": 1,
+      "false_negative": 5,
+      "precision": 0.75,
+      "recall": 0.375,
+      "f1": 0.5,
+      "count_error": -4,
+      "absolute_count_error": 4
+    }
+  ]
+}

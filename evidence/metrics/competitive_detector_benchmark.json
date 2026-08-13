@@ -1,0 +1,265 @@
+{
+  "design": {
+    "training_dataset": "unified_fruit_v4_stage_strict",
+    "same_source_disjoint_splits": true,
+    "epochs": 10,
+    "seeds": [
+      20260805,
+      20260806,
+      20260807
+    ],
+    "imgsz": 1024,
+    "batch": 4,
+    "optimizer": "AdamW",
+    "initial_lr": 0.0007,
+    "models": [
+      "YOLO11m",
+      "RT-DETR-L",
+      "PruScope A2"
+    ],
+    "comparison_scope": "three-seed matched-budget task-level benchmark; initialization lineage differs and is disclosed",
+    "runtime_protocol": {
+      "source": "cached decoded source-image arrays",
+      "timed_scope": "complete detector.predict call over the fixed image set",
+      "warmup_full_set_passes": 3,
+      "timed_full_set_passes": 10,
+      "cuda_synchronized_before_and_after_timing": true,
+      "batch": 1,
+      "imgsz": 1024,
+      "confidence": 0.25,
+      "iou": 0.7,
+      "max_det": 500
+    }
+  },
+  "training": {
+    "yolo11m": [
+      {
+        "run": "benchmark_yolo11m_v4_s20260805_e10",
+        "completed_epochs": 10,
+        "best_epoch": 10,
+        "best_validation_AP50_95": 0.58973
+      },
+      {
+        "run": "benchmark_yolo11m_v4_s20260806_e10",
+        "completed_epochs": 10,
+        "best_epoch": 9,
+        "best_validation_AP50_95": 0.59028
+      },
+      {
+        "run": "benchmark_yolo11m_v4_s20260807_e10",
+        "completed_epochs": 10,
+        "best_epoch": 9,
+        "best_validation_AP50_95": 0.58644
+      }
+    ],
+    "rtdetr_l": [
+      {
+        "run": "benchmark_rtdetr_l_v4_s20260805_e10",
+        "completed_epochs": 10,
+        "best_epoch": 10,
+        "best_validation_AP50_95": 0.54904
+      },
+      {
+        "run": "benchmark_rtdetr_l_v4_s20260806_e10",
+        "completed_epochs": 10,
+        "best_epoch": 9,
+        "best_validation_AP50_95": 0.55005
+      },
+      {
+        "run": "benchmark_rtdetr_l_v4_s20260807_e10",
+        "completed_epochs": 10,
+        "best_epoch": 9,
+        "best_validation_AP50_95": 0.54376
+      }
+    ],
+    "pruscope_a2": [
+      {
+        "run": "pruscope_ablation_a2_ccph_strict_seeded_s20260805",
+        "completed_epochs": 10,
+        "best_epoch": 10,
+        "best_validation_AP50_95": 0.5893
+      },
+      {
+        "run": "pruscope_ablation_a2_ccph_strict_seeded_s20260806",
+        "completed_epochs": 10,
+        "best_epoch": 8,
+        "best_validation_AP50_95": 0.59297
+      },
+      {
+        "run": "pruscope_ablation_a2_ccph_strict_seeded_s20260807",
+        "completed_epochs": 10,
+        "best_epoch": 9,
+        "best_validation_AP50_95": 0.59435
+      }
+    ]
+  },
+  "systems": [
+    {
+      "key": "yolo11m",
+      "label": "YOLO11m",
+      "n_seeds": 3,
+      "per_seed": {
+        "internal_all_AP50_95": {
+          "20260805": 0.5997301237317757,
+          "20260806": 0.6083819552367544,
+          "20260807": 0.6011103846482482
+        },
+        "internal_small_AP50_95": {
+          "20260805": 0.40211376584366576,
+          "20260806": 0.4252250990466879,
+          "20260807": 0.40773159051687957
+        },
+        "internal_small_AR50": {
+          "20260805": 0.9542857142857143,
+          "20260806": 0.96,
+          "20260807": 0.9561904761904761
+        },
+        "external_all_AP50_95": {
+          "20260805": 0.574144132475009,
+          "20260806": 0.5747384853088995,
+          "20260807": 0.5667406970683168
+        },
+        "external_small_AP50_95": {
+          "20260805": 0.37146353603955806,
+          "20260806": 0.36160531430495235,
+          "20260807": 0.34830223018493134
+        },
+        "external_small_AR50": {
+          "20260805": 0.8888888888888888,
+          "20260806": 0.8661887694145759,
+          "20260807": 0.8399044205495818
+        }
+      },
+      "internal_all_AP50_95": 0.6030741545389261,
+      "internal_all_AP50_95_sd": 0.004648208389829945,
+      "internal_small_AP50_95": 0.4116901518024111,
+      "internal_small_AP50_95_sd": 0.012053467807803711,
+      "internal_small_AR50": 0.9568253968253968,
+      "internal_small_AR50_sd": 0.002909571869813214,
+      "external_all_AP50_95": 0.571874438284075,
+      "external_all_AP50_95_sd": 0.004455871180315933,
+      "external_small_AP50_95": 0.36045702684314723,
+      "external_small_AP50_95_sd": 0.01162327171213405,
+      "external_small_AR50": 0.8649940262843488,
+      "external_small_AR50_sd": 0.024514079484687198,
+      "parameters": 20053779,
+      "gflops_at_imgsz": 175.347204096,
+      "latency_ms_per_image_mean": 10.240817968769989,
+      "latency_ms_per_image_sd": 0.2985630487396049,
+      "peak_cuda_memory_mib": 6715.9658203125
+    },
+    {
+      "key": "rtdetr_l",
+      "label": "RT-DETR-L",
+      "n_seeds": 3,
+      "per_seed": {
+        "internal_all_AP50_95": {
+          "20260805": 0.5726374705686401,
+          "20260806": 0.5880494702906426,
+          "20260807": 0.5833399467851963
+        },
+        "internal_small_AP50_95": {
+          "20260805": 0.3734729471629655,
+          "20260806": 0.39845851015341094,
+          "20260807": 0.3966822292571964
+        },
+        "internal_small_AR50": {
+          "20260805": 0.9638095238095238,
+          "20260806": 0.9580952380952381,
+          "20260807": 0.9561904761904761
+        },
+        "external_all_AP50_95": {
+          "20260805": 0.47615790294768967,
+          "20260806": 0.4864531460989278,
+          "20260807": 0.47775181678910156
+        },
+        "external_small_AP50_95": {
+          "20260805": 0.21286754428648233,
+          "20260806": 0.20392317507428795,
+          "20260807": 0.24549287733985747
+        },
+        "external_small_AR50": {
+          "20260805": 0.7885304659498208,
+          "20260806": 0.7240143369175627,
+          "20260807": 0.6606929510155317
+        }
+      },
+      "internal_all_AP50_95": 0.581342295881493,
+      "internal_all_AP50_95_sd": 0.007897809234689768,
+      "internal_small_AP50_95": 0.3895378955245243,
+      "internal_small_AP50_95_sd": 0.013940972629276158,
+      "internal_small_AR50": 0.9593650793650793,
+      "internal_small_AR50_sd": 0.003965078094221205,
+      "external_all_AP50_95": 0.480120955278573,
+      "external_all_AP50_95_sd": 0.0055414457294554725,
+      "external_small_AP50_95": 0.22076119890020926,
+      "external_small_AP50_95_sd": 0.02188018222005094,
+      "external_small_AR50": 0.7244125846276384,
+      "external_small_AR50_sd": 0.06391968794567587,
+      "parameters": 32808131,
+      "gflops_at_imgsz": 274.274945408,
+      "latency_ms_per_image_mean": 14.568000156259586,
+      "latency_ms_per_image_sd": 0.5469517606523823,
+      "peak_cuda_memory_mib": 7807.806640625
+    },
+    {
+      "key": "pruscope_a2",
+      "label": "PruScope A2",
+      "n_seeds": 3,
+      "per_seed": {
+        "internal_all_AP50_95": {
+          "20260805": 0.6089326432025157,
+          "20260806": 0.6049091385494837,
+          "20260807": 0.6089786562520254
+        },
+        "internal_small_AP50_95": {
+          "20260805": 0.4454371330783882,
+          "20260806": 0.42150905697673596,
+          "20260807": 0.430846876411659
+        },
+        "internal_small_AR50": {
+          "20260805": 0.9619047619047619,
+          "20260806": 0.9619047619047619,
+          "20260807": 0.9580952380952381
+        },
+        "external_all_AP50_95": {
+          "20260805": 0.5750844657663515,
+          "20260806": 0.5619274203733448,
+          "20260807": 0.5705027177203417
+        },
+        "external_small_AP50_95": {
+          "20260805": 0.3806116634363048,
+          "20260806": 0.36254839359601976,
+          "20260807": 0.37943429248254396
+        },
+        "external_small_AR50": {
+          "20260805": 0.8888888888888888,
+          "20260806": 0.8626045400238949,
+          "20260807": 0.8649940262843488
+        }
+      },
+      "internal_all_AP50_95": 0.6076068126680083,
+      "internal_all_AP50_95_sd": 0.0023363675946861027,
+      "internal_small_AP50_95": 0.4325976888222611,
+      "internal_small_AP50_95_sd": 0.012059735260545906,
+      "internal_small_AR50": 0.9606349206349206,
+      "internal_small_AR50_sd": 0.002199429596912865,
+      "external_all_AP50_95": 0.5691715346200127,
+      "external_all_AP50_95_sd": 0.00667877213291196,
+      "external_small_AP50_95": 0.37419811650495616,
+      "external_small_AP50_95_sd": 0.010106116142313942,
+      "external_small_AR50": 0.8721624850657108,
+      "external_small_AR50_sd": 0.014534677491751994,
+      "parameters": 22340456,
+      "gflops_at_imgsz": 267.7276672,
+      "latency_ms_per_image_mean": 14.226081093761422,
+      "latency_ms_per_image_sd": 0.6679669958692617,
+      "peak_cuda_memory_mib": 15725.83349609375
+    }
+  ],
+  "provenance": {
+    "reports\\evaluation\\competitive_detector_benchmark_v1\\internal\\size_stratified_metrics.json": "db742e67e0aecdb390d41bbcb0b36077006ca594dbf58309255b54df3000aa43",
+    "reports\\evaluation\\competitive_detector_benchmark_v1\\external_plum\\size_stratified_metrics.json": "40dff3709a8aed96f92b3ad703f51c04de2684d79563e04d7020682355356e71",
+    "reports\\evaluation\\pruscope_detector_runtime_standardized_v2\\runtime_benchmark.json": "5d59191849a18f06eb00d63d5da77f9d7b8900ecd225660225809aad7bec99dc"
+  }
+}

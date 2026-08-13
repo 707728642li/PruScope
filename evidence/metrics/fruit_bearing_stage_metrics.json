@@ -1,0 +1,51 @@
+{
+  "source_images": 240,
+  "fruit_bearing_images": 232,
+  "excluded_zero_reference_images": 8,
+  "image_eligibility": "at least one human-reference fruit",
+  "stages": [
+    "small_green",
+    "medium_green",
+    "mature"
+  ],
+  "outcomes": [
+    "small_green",
+    "medium_green",
+    "mature",
+    "no_detection"
+  ],
+  "image_confusion_with_no_detection": [
+    [
+      115,
+      0,
+      0,
+      5
+    ],
+    [
+      1,
+      80,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      24,
+      6
+    ]
+  ],
+  "metrics": {
+    "image_coverage": 0.9525862068965517,
+    "image_accuracy_with_no_detection_as_error": 0.9439655172413793,
+    "image_macro_f1_with_no_detection_as_error": 0.9456600758747155,
+    "matched_fruit": 2374,
+    "correctly_staged_matched_fruit": 2366,
+    "matched_fruit_stage_accuracy": 0.9966301600673968,
+    "ground_truth_fruit": 5151,
+    "joint_correct_stage_recall_over_all_gt": 0.45932828576975343
+  },
+  "zero_reference_diagnostic": {
+    "images_with_no_detection": 7,
+    "images_with_false_positive_detections": 1
+  }
+}

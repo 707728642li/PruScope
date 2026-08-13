@@ -1,0 +1,29 @@
+{
+  "images": 232,
+  "source_images": 240,
+  "image_eligibility": "at least one human-reference fruit",
+  "bootstrap_iterations": 5000,
+  "seed": 20260812,
+  "results": {
+    "image_coverage": {
+      "estimate": 0.9525862068965517,
+      "lower_95": 0.9224137931034483,
+      "upper_95": 0.978448275862069
+    },
+    "image_accuracy_with_no_detection_as_error": {
+      "estimate": 0.9439655172413793,
+      "lower_95": 0.9137931034482759,
+      "upper_95": 0.9698275862068966
+    },
+    "image_macro_f1_with_no_detection_as_error": {
+      "estimate": 0.9456600758747155,
+      "lower_95": 0.9082609168609169,
+      "upper_95": 0.9747972919521347
+    },
+    "joint_correct_stage_recall_over_all_gt": {
+      "estimate": 0.45932828576975343,
+      "lower_95": 0.4177962479810311,
+      "upper_95": 0.49770031849075647
+    }
+  }
+}

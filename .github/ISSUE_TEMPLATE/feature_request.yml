@@ -1,0 +1,26 @@
+name: Feature request
+description: Propose a reproducible scientific or engineering improvement.
+title: "[Feature]: "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Scientific or user problem
+      description: Explain the affected workflow and current limitation.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+      description: Include intended inputs, outputs, evaluation, and backward-compatibility impact.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Validation plan
+      description: Identify a leakage-safe dataset split, metric, baseline, seed plan, and failure test.
+    validations:
+      required: true

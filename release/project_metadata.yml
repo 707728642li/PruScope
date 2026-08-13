@@ -1,0 +1,64 @@
+schema_version: research_software_release.v1
+project_name: PruScope
+distribution_name: null
+import_name: pruscope
+cli_name: null
+one_sentence_summary: "Leakage-controlled detection, counting, and ordinal visual-stage phenotyping of plum fruit from microfruit to visual maturity."
+project_type: model_research_pipeline
+public_version: 1.0.0-rc.1
+internal_snapshot: null
+release_date: "2026-08-14"
+status: private_reviewer_candidate
+repository: "https://github.com/707728642li/PruScope"
+documentation: "https://github.com/707728642li/PruScope/tree/main/docs"
+issue_tracker: "https://github.com/707728642li/PruScope/issues"
+maintainers:
+  - name: Taishan Li
+    affiliation: Chinese Academy of Forestry
+    email: litaishan@caf.ac.cn
+    github: 707728642li
+    orcid: null
+associated_manuscript:
+  title: "PruScope: Leakage-Controlled Detection, Counting, and Ordinal Stage Phenotyping of Plum from Microfruit to Visual Maturity"
+  target_journal: Plant Phenomics
+  authors:
+    - name: Hui Li
+      affiliation: Research Institute of Forestry Policy and Information, Chinese Academy of Forestry, Beijing 100091, China
+      email: lihui09610@163.com
+      corresponding: true
+      orcid: null
+license:
+  code_spdx: null
+  documentation: null
+  model_weights: null
+  internal_data: null
+  status: "pending author/rightsholder approval; private all-rights-reserved notice applies"
+platforms:
+  production: []
+  tested:
+    - Windows 11
+languages:
+  - Python
+minimum_runtime: "Python 3.10 for reviewer audit; full model stack is separately documented"
+hardware:
+  training: "local NVIDIA RTX 3090 GPUs"
+  reviewer_audit: "CPU only"
+concept_doi: null
+version_doi: null
+paper_doi: null
+archive_commit: null
+release_tag: null
+container_image: null
+package_indexes: []
+included_assets:
+  - core source and model configs
+  - manuscript source and review PDF
+  - final figures and figure scripts
+  - aggregate metrics and protocol locks
+  - synthetic metric-audit fixture
+excluded_assets:
+  - internal images and annotations
+  - model weights and third-party checkpoints
+  - raw external datasets
+  - per-image internal predictions
+  - credentials and login-only identifiers

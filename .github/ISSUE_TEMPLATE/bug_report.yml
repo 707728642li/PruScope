@@ -1,0 +1,42 @@
+name: Bug report
+description: Report a reproducible defect without confidential data.
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Do not upload restricted images, annotations, checkpoints, credentials, or internal paths.
+  - type: input
+    id: commit
+    attributes:
+      label: Commit
+      description: Git commit hash where the issue occurs.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, Python, PyTorch, Ultralytics, CUDA, and GPU where applicable.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproduction steps
+      description: Provide the smallest safe command/input description.
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Expected and observed behavior
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Safety check
+      options:
+        - label: I removed credentials, personal paths, restricted filenames, and unpublished data.
+          required: true
