@@ -6,6 +6,7 @@ This directory contains the current manuscript source, a review PDF, final figur
 
 - `PRUSCOPE_MANUSCRIPT_SOURCE.md` is the editable source of the current scientific text.
 - `PruScope_Plant_Phenomics_Manuscript.pdf` is the visually checked review rendering.
+- `figure_sources/model_workflow.png` is the authoritative reviewed artwork for Figure 1.
 - `figures/` contains the final main and supplementary figures in the available PNG/PDF/SVG formats.
 - `scripts/` preserves generation logic for review. Some scripts require restricted source images, per-image predictions, or the complete internal metric registry and therefore are not runnable from this lightweight repository alone.
 
