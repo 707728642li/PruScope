@@ -4,6 +4,10 @@ PruScope is a leakage-controlled research pipeline for detecting, counting, and 
 
 > **Repository status:** private reviewer candidate `1.0.0-rc.1`. The repository is not a public software or model release. Model weights, internal orchard images, internal annotations, and per-image predictions are intentionally excluded while redistribution and licensing are resolved.
 
+<p align="center">
+  <img src="docs/assets/pruscope_model_workflow.png" alt="PruScope experimental safeguards, unified scale-stage architecture, and optional high-recall DART route" width="100%">
+</p>
+
 ## Why PruScope
 
 Small green fruit are difficult to localize because whole-canopy resizing removes detail, leaves share their color, and occlusion is common. PruScope combines:
@@ -69,7 +73,7 @@ Expected output: `reviewer_check.json` matches `examples/synthetic_metric_audit/
 | `src/pruscope/` | CCPH, OSSA, GLAF, DCOH, and DART modules |
 | `src/*.py` | training, inference, evaluation, bootstrap, and audit entry points |
 | `configs/models/` | detector architecture configurations |
-| `paper/` | current manuscript source, review PDF, figures, and figure-generation scripts |
+| `docs/assets/` | repository-homepage architecture and workflow artwork |
 | `evidence/metrics/` | aggregate frozen results and protocol locks; no raw images or annotation coordinates |
 | `docs/` | installation, reproduction, reviewer, model, data, and limitation notes |
 | `examples/` | redistributable synthetic audit fixture |
@@ -94,7 +98,7 @@ External plum data and CitDet remain available from their original sources and u
 
 ## Review status and limitations
 
-The code, paper, figures, aggregate evidence, metadata checks, and synthetic audit have been assembled for private review. A public release remains blocked until the author/rightsholder confirms code, documentation, weight, and internal-data licensing. No GitHub Release, tag, package-index publication, model-hub deposit, or DOI is claimed. The complete gate is in [RELEASE_READINESS.md](RELEASE_READINESS.md).
+The code, aggregate evidence, architecture overview, metadata checks, and synthetic audit have been assembled for private review. Manuscript files and publication figures are maintained outside this software repository. A public release remains blocked until the author/rightsholder confirms code, documentation, weight, and internal-data licensing. No GitHub Release, tag, package-index publication, model-hub deposit, or DOI is claimed. The complete gate is in [RELEASE_READINESS.md](RELEASE_READINESS.md).
 
 ## Citation, support, and license
 

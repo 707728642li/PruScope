@@ -2,6 +2,13 @@
 
 All notable repository changes are documented here. This project follows Semantic Versioning for reviewer candidates and future releases.
 
+## [Unreleased]
+
+### Changed
+
+- Promoted the reviewed PruScope model workflow to the repository homepage.
+- Removed the manuscript, publication figures, and figure-generation scripts from the software repository; these assets are maintained separately.
+
 ## [1.0.0-rc.1] - 2026-08-14
 
 ### Added

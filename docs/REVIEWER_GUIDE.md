@@ -6,7 +6,7 @@
 2. Run the five-minute check in `docs/TUTORIAL.md`.
 3. Use `docs/MANUSCRIPT_EVIDENCE_MAP.md` to trace claims to aggregate evidence.
 4. Read `MODEL_CARD.md`, `DATA_CARD.md`, and `docs/LIMITATIONS.md` before interpreting scores.
-5. Review the current source and PDF in `paper/` and the final figures in `paper/figures/`.
+5. Review the architecture overview on the repository homepage and trace quantitative claims through the aggregate evidence map.
 
 ## High-value audit questions
 
@@ -21,7 +21,7 @@
 
 ## Package limitations
 
-This repository supports manuscript, source, aggregate-evidence, and figure review. It does not permit end-to-end inference reproduction because weights and a redistributable image fixture are not approved. Request confidential artifacts through the journal or corresponding author rather than posting restricted material in an issue.
+This repository supports source-code and aggregate-evidence review. Manuscript files and publication figures are maintained separately. It does not permit end-to-end inference reproduction because weights and a redistributable image fixture are not approved. Request confidential artifacts through the journal or corresponding author rather than posting restricted material in an issue.
 
 ## Reporting review findings
 

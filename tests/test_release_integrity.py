@@ -72,26 +72,15 @@ class MetadataTests(unittest.TestCase):
         self.assertIn("release_tag: null", metadata)
         self.assertIn("code_spdx: null", metadata)
 
-    def test_paper_assets_exist(self):
-        self.assertTrue((ROOT / "paper/PRUSCOPE_MANUSCRIPT_SOURCE.md").is_file())
-        self.assertTrue((ROOT / "paper/PruScope_Plant_Phenomics_Manuscript.pdf").is_file())
-        for stem in (
-            "fig1_experimental_design_and_pruscope_architecture",
-            "fig2_adverse_plum_scenes_and_detection_evidence",
-            "fig3_detector_ablation_statistics_and_efficiency",
-            "fig4_dcoh_stage_discrimination_and_robustness",
-            "fig5_qualitative_detection_and_count_errors",
-            "fig6_competitive_benchmark_and_end_to_end_stage",
-            "figS1_mars_postaudit_optimization_and_confirmation",
-            "figS2_public_citdet_external_validation",
-            "figS3_postreview_difficult_target_update",
-        ):
-            for suffix in (".png", ".pdf", ".svg"):
-                self.assertTrue((ROOT / "paper/figures" / f"{stem}{suffix}").is_file())
-        for suffix in (".png", ".pdf"):
-            self.assertTrue(
-                (ROOT / "paper/figures" / f"figS4_dart_microfruit_refinement{suffix}").is_file()
-            )
+    def test_homepage_artwork_and_publication_asset_boundary(self):
+        artwork = ROOT / "docs/assets/pruscope_model_workflow.png"
+        self.assertTrue(artwork.is_file())
+        self.assertFalse((ROOT / "paper").exists())
+
+        readme = (ROOT / "README.md").read_text(encoding="utf-8")
+        image_reference = 'src="docs/assets/pruscope_model_workflow.png"'
+        self.assertIn(image_reference, readme)
+        self.assertLess(readme.index(image_reference), readme.index("## Why PruScope"))
 
 
 if __name__ == "__main__":

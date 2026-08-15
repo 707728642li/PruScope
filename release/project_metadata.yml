@@ -52,11 +52,11 @@ container_image: null
 package_indexes: []
 included_assets:
   - core source and model configs
-  - manuscript source and review PDF
-  - final figures and figure scripts
+  - repository-homepage architecture overview
   - aggregate metrics and protocol locks
   - synthetic metric-audit fixture
 excluded_assets:
+  - manuscript files and publication figures
   - internal images and annotations
   - model weights and third-party checkpoints
   - raw external datasets

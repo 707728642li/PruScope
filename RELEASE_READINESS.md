@@ -6,7 +6,7 @@
 
 ## Scope reviewed
 
-This gate covers the manuscript-facing repository: core source, architecture configs, aggregate metrics, protocol locks, final paper source/PDF, figures and figure scripts, documentation, tests, CI, metadata, and checksums. It does not certify a deployable public model because weights and complete redistributable data are absent.
+This gate covers the software-facing repository: core source, architecture configs, aggregate metrics, protocol locks, the homepage architecture overview, documentation, tests, CI, metadata, and checksums. Manuscript files and publication figures are maintained separately. It does not certify a deployable public model because weights and complete redistributable data are absent.
 
 ## Completed and verified
 
@@ -14,7 +14,8 @@ This gate covers the manuscript-facing repository: core source, architecture con
 - [x] Repository name, candidate version, URL, citation, and changelog aligned.
 - [x] Current manuscript title and plum-only terminology aligned.
 - [x] Core model/training/inference/evaluation scripts included.
-- [x] Final main and supplementary figures included as PNG, PDF, and SVG.
+- [x] Reviewed architecture and workflow overview included on the repository homepage.
+- [x] Manuscript and publication-figure assets kept outside the software repository.
 - [x] Aggregate manuscript evidence and validation locks included.
 - [x] Synthetic, redistributable audit example with fixed expected output included.
 - [x] Required community, security, support, model-card, and data-card documents included.

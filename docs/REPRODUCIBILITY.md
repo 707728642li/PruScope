@@ -37,9 +37,9 @@ A complete neural-model reproduction requires assets not distributed in this can
 
 Once those rights are approved, the stable release should add a weight manifest, a small redistributable image fixture, CPU/GPU load smoke tests, a clean-machine run log, and a versioned archival DOI.
 
-## Figure regeneration
+## Publication-asset boundary
 
-Final figure scripts are in `paper/scripts/`. Some qualitative panels depend on restricted orchard images and per-image predictions and cannot be regenerated from this lightweight repository. Quantitative figure regeneration requires the frozen result tables documented in the evidence map. The committed PNG/PDF/SVG outputs are the review artifacts and are covered by `release/SHA256SUMS`.
+Manuscript files, publication figures, and their generation scripts are maintained outside this software repository. The reviewed architecture overview used on the repository homepage is stored at `docs/assets/pruscope_model_workflow.png` and is covered by `release/SHA256SUMS`. Reconstructing publication figures additionally requires restricted orchard images, per-image predictions, and the complete analysis workspace.
 
 Checksums use canonical LF bytes for text files so the same Git content verifies on Windows and Linux; binary assets are hashed byte-for-byte.
 
